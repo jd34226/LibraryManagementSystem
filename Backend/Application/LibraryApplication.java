@@ -26,11 +26,11 @@ public class LibraryApplication {
 	        public void addCorsMappings(CorsRegistry registry) {
 	            registry.addMapping("/**")
 	                .allowedOrigins(
-	                    "http://libraryapplication.mgmt",
-	                    "http://libraryapplication.mgmt:3000"
+	                    "http://<frontend-domain>",
+						"http://<frontend-domain>:<port>"
 	                )
 	                .allowedMethods("GET", "POST", "PUT", "DELETE")
-	                .allowCredentials(true);
+	                .allowCredentials(false);
 	        }
 	    };
 	}
