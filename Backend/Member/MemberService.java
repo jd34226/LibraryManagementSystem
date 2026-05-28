@@ -41,6 +41,7 @@ public class MemberService {
         return memberRepository.findById(id);
     }
 
+    // TODO: Use PasswordEncoder.matches(rawPassword, encodedPassword) for authentication instead of raw string comparison. Current code is used for simplicity.
     // Login with username
     public Optional<Member> login(String username, String password) {
         Optional<Member> member = memberRepository.findByUsername(username);
