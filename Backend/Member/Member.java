@@ -13,8 +13,8 @@ public class Member {
     @Column(nullable = false, unique = true)
     private String username;
 
-    private String password;
-
+    private String password; // NOTE: Passwords can be stored hashed or encrypted to imporve security
+    
     private String role; // "ADMIN" or "MEMBER"
 
     public Long getId() { return id; }
