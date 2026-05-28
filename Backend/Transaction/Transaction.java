@@ -12,6 +12,7 @@ public class Transaction {
 
 	@Id
 	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	// NOTE: For the demo we use a simple String id. In production prefer DB-generated ids or UUIDs and avoid sequential IDs that can be enumerated.
 	private String id;
 	@Column(name = "borrow_date")
 	private LocalDate borrowDate;
@@ -26,7 +27,7 @@ public class Transaction {
 	private Book book;
 	@ManyToOne
 	@JoinColumn(name = "mem_id")
-	private Member member;
+	private Member member; // Hide sensitive member fields (password) when serializing transactions. Current code is for simplicity.
 
 
 	public String getId() {
