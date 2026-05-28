@@ -16,6 +16,7 @@ public class MemberService {
         this.memberRepository = memberRepository;
     }
 
+    // TODO: Encode passwords before saving (PasswordEncoder.encode). Current demo stores raw values for simplicity.
     // Add/Register member
     public Member addMember(Member member) {
         return memberRepository.save(member);
