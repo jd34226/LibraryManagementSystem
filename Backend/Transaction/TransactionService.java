@@ -30,6 +30,7 @@ public class TransactionService {
     }
 
 
+    // This demo uses simple logic for status updates; consider event/audit logging in production.
     public Transaction addTransaction(Transaction transaction) {
         transaction.setId(generateNextTxId());
         if (transaction.getReturnDate() == null) {
