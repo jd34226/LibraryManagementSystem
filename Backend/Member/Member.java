@@ -1,7 +1,5 @@
 package mgt.library.member.model;
-
 import jakarta.persistence.*;
-
 @Entity
 public class Member {
     @Id
